@@ -1,0 +1,53 @@
+@model MvcUniversity.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.LastName) @Html.DisplayFor(model => model.FirstName)</h2>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Enrollments)
+        </dt>
+        <dd class="col-sm-9">
+            @if (Model.Enrollments.Count > 0)
+            {
+                <table class="table">
+                    <tr>
+                        <th>Course Title</th>
+                        <th>Grade</th>
+                    </tr>
+                    @foreach (var item in Model.Enrollments)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Course.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Grade)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <text>None</text>
+            }
+
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-controller="Enrollment" asp-action="Create" asp-route-studentId="@Model.Id">Enroll in Course</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
