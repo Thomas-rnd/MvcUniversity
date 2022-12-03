@@ -24,19 +24,22 @@
     <tbody>
         @foreach (var item in Model)
         {
+            //item bien un student
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.LastName)
+                    @item.LastName
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.FirstName)
+                    @item.FirstName
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.EnrollmentDate)
-                </td>
+                    <!--Pour avoir le bon format d'affichage-->
+            </td>
                 <td>
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                </td>
+                    <!--/@item.Id retourne bien l'id de l'étudiant qu'on traite grâce au foreach-->|
+            </td>
             </tr>
         }
     </tbody>

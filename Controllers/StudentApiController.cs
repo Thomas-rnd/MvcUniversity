@@ -55,6 +55,16 @@ public class StudentApiController : ControllerBase
 
         return CreatedAtAction(nameof(GetStudent), new { id = student.Id }, student);
     }
+    /*
+    test sur postman
+    Dans Header ajouter KEY : Content-Type VALUE : application/json
+    POST : 
+    {
+        "LastName": "Renaud",
+        "FirstName": "Thomas",
+        "EnrollmentDate": "2022-03-13T00:00:00", (date au format json)
+    }
+    */
 
     // DELETE: api/StudentApi/5
     [HttpDelete("{id}")]
@@ -69,4 +79,8 @@ public class StudentApiController : ControllerBase
 
         return NoContent();
     }
+    /*
+    test sur postman
+    DELETE : https://localhost:{num}/api/StudentApi/{id}
+    */
 }

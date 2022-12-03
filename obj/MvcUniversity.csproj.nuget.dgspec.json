@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/thomasrenaud/Desktop/MvcUniversity-main/MvcUniversity.csproj": {}
+  },
+  "projects": {
+    "/Users/thomasrenaud/Desktop/MvcUniversity-main/MvcUniversity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/thomasrenaud/Desktop/MvcUniversity-main/MvcUniversity.csproj",
+        "projectName": "MvcUniversity",
+        "projectPath": "/Users/thomasrenaud/Desktop/MvcUniversity-main/MvcUniversity.csproj",
+        "packagesPath": "/Users/thomasrenaud/.nuget/packages/",
+        "outputPath": "/Users/thomasrenaud/Desktop/MvcUniversity-main/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/thomasrenaud/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/6.0.109/libexec/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

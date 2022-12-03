@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>@Html.DisplayFor(model => model.LastName) @Html.DisplayFor(model => model.FirstName)</h2>
+<h2>@Model.LastName @Model.FirstName</h2>
 
 <div>
     <hr />
@@ -30,10 +30,10 @@
                     {
                         <tr>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Course.Title)
+                                @item.Course.Title
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Grade)
+                                @item.Grade
                             </td>
                         </tr>
                     }
